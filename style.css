@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #e7f0f3, #d6e0ff, #cce2ff, #417edb);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 15s ease infinite;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffffee;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  color: #4834d4;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-shadow: 1px 1px 2px #aaa;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6a5acd;
+  box-shadow: 0 0 8px rgba(106, 90, 205, 0.4);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(to right, #6a5acd, #4834d4);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.4s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #5848c2, #341f97);
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+#clickCounter {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #555;
+  text-align: center;
+}
+
+#finalMessage {
+  margin-top: 20px;
+  color: green;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+#finalMessage.show {
+  opacity: 1;
+}
+
+#preview img,
+#preview embed {
+  max-width: 100%;
+  margin-top: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}

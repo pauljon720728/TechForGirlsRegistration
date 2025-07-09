@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech For Girls Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container animate__animated animate__fadeIn">
+    <h1>🚀 Tech For Girls Registration</h1>
+
+    <form id="registrationForm">
+      <!-- Basic Details -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="number">Phone Number:</label>
+      <input type="text" id="number" name="number" required />
+
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="college">College/Department:</label>
+      <input type="text" id="college" name="college" required />
+
+      <!-- WhatsApp Share -->
+      <button type="button" id="whatsappBtn">📤 Share on WhatsApp</button>
+      <p id="clickCounter">Click count: 0/5</p>
+
+      <!-- Screenshot Upload -->
+      <label for="fileUpload">Upload Screenshot:</label>
+      <input type="file" name="fileUpload" id="fileUpload" accept="image/*,application/pdf" required />
+
+      <!-- Preview -->
+      <div id="preview"></div>
+
+
+      <button type="submit" id="submitBtn">Submit Registration</button>
+    </form>
+
+    <p id="finalMessage"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
